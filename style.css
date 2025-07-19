@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #f5f0fa;
+  padding: 5vh 2vw;
+  user-select: none;
+  -webkit-user-drag: auto;
+  touch-action: manipulation;
+  color: #2b366f;
+}
+
+h1 {
+  font-size: 6vw;
+  margin-bottom: 5vh;
+  color: #1e2a78;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 24vw);
+  gap: 2vw;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 24vw;
+  height: 24vw;
+  background-color: #d8c4ec;
+  font-size: 10vw;
+  font-weight: bold;
+  text-align: center;
+  line-height: 24vw;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  color: #1e2a78;
+}
+
+.cell:hover {
+  background-color: #c3aee0;
+}
+
+#message {
+  margin-bottom: 15px;
+  font-size: 5vw;
+  text-align: center;
+  color: #2b366f;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#resetBtn {
+  margin-top: 3vh;
+  padding: 2vh 5vw;
+  font-size: 4vw;
+  background-color: #1e2a78;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#resetBtn:hover {
+  background-color: #18205c;
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 7vw;
+  }
+
+  #message,
+  #resetBtn {
+    font-size: 5vw;
+    font-family: "Courier New", Courier, monospace;
+  }
+}
